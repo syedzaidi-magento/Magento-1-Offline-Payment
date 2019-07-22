@@ -1,0 +1,57 @@
+<!-- Front-end form  -->
+<div class="form-list" id="payment_form_<?php echo $this->getMethodCode() ?>" >
+  <div>
+    <label class="required"><?php echo $this->__('Credit Card Type') ?> - </label><br />
+    <span>
+      <select name="payment[custom_field_one]">
+        <option value="American Express">American Express</option>
+        <option value="Visa">Visa</option>
+        <option value="MasterCard">MasterCard</option>
+        <option value="audi">Discover</option>
+      </select>
+    </span>
+  </div>
+    <br>
+  <div>
+    <label class="required"><?php echo $this->__('Credit Card Number') ?> -  (Ex: 1234-1234-1234-1234) </label><br />
+    <span>
+      <input type="text" class="input-text " title="<?php echo $this->__('Credit Card Number') ?>" name="payment[custom_field_two]"
+      value="<?php echo $this->htmlEscape($this->getInfoData('custom_field_two')) ?>" />
+    </span>
+  </div>
+    <br>
+  <div>
+    <label class="required"><?php echo $this->__('Name on the Card') ?> -  (Ex: Your Name)</label><br />
+    <span>
+      <input type="text" class="input-text" title="<?php echo $this->__('Custom Field Three') ?>"
+      name="payment[custom_field_three]"
+      value="<?php echo $this->htmlEscape($this->getInfoData('custom_field_three')) ?>" />
+    </span>
+  </div>
+  <br />
+
+  <div>
+    <label class="required"><?php echo $this->__('Expiration Date') ?> -  (Ex: 02-2019 or Feb-2019)</label><br />
+
+
+    <span>
+      <input type="text" class="input-text" title="<?php echo $this->__('Custom Field Four') ?>"
+      name="payment[custom_field_four]"
+      value="<?php echo $this->htmlEscape($this->getInfoData('custom_field_four')) ?>" />
+    </span>
+  </div>
+    <br>
+  <div>
+    <label class="required"><?php echo $this->__('Credit Card CVV') ?> -  (Ex: Card Verification Number 123)</label><br />
+    <span>
+      <input type="text" class="input-text" title="<?php echo $this->__('Custom Field Five') ?>"
+      name="payment[custom_field_five]"
+      value="<?php echo $this->htmlEscape($this->getInfoData('custom_field_five')) ?>" />
+    </span>
+  </div>
+
+
+</div>
+<div>
+    <?php echo $this->getMethod()->getConfigData('message');?>
+</div>

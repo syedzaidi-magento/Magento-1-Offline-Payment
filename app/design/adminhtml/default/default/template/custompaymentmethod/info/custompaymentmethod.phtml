@@ -1,0 +1,40 @@
+<!-- Admin data fetch  -->
+<?php $_code=$this->getMethodCode() ?>
+<div class="form-list" id="payment_form_<?php echo $_code ?>">
+    <div>
+        <label><?php echo $this->__('Credit Card Type:') ?>*</label>
+        <span>
+      <!-- <input type="text" title="<?php //echo $this->__('Custom Field One') ?>"
+      name="payment[custom_field_one]"
+      value="<?php //echo $this->escapeHtml($this->getInfo()->getCustomFieldOne()); ?>" /> -->
+        <?php echo $this->escapeHtml($this->getInfo()->getCustomFieldOne()); ?>
+    </span>
+    </div>
+    <div>
+        <label><?php echo $this->__('Credit Card Number:') ?>*</label>
+        <span>
+      <?php echo $this->escapeHtml($this->getInfo()->getCustomFieldTwo()); ?>
+        </span>
+    </div>
+    <div>
+        <label><?php echo $this->__('Name on the Card:') ?>*</label>
+        <span>
+      <?php echo $this->escapeHtml($this->getInfo()->getCustomFieldThree()); ?>
+    </span>
+    </div>
+    <div>
+        <label><?php echo $this->__('Expiration Date:') ?>*</label>
+        <span>
+          <?php echo $this->escapeHtml($this->getInfo()->getCustomFieldFour()); ?>
+    </span>
+    </div>
+    <div>
+        <label><?php echo $this->__('Card CVV:') ?>*</label>
+        <span>
+      <?php echo $this->escapeHtml($this->getInfo()->getCustomFieldFive()); ?>
+    </span>
+    </div>
+</div>
+<div>
+    <?php echo $this->getMethod()->getConfigData('message');?>
+</div>
